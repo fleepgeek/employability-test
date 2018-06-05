@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Job Recruitment System</title>
+    {% include 'base/css.html' %}
+    {% block base_head %}{% endblock %}
+</head>
+<body>
+  {% include 'base/navbar.html' %}
+  <div class='container'>
+    
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert {{message.tags}} messages">
+          <span{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+              {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+              {{ message }}<br/>
+          </span>
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    
+  </div>
+    
+  {% block content %}{% endblock %}
+
+    {% include 'base/js.html' %}
+
+    {% block javascript %}
+    
+    {% endblock javascript %}
+
+  </body>
+</html>
