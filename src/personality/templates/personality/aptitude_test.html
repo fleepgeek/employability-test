@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container">
+    <form action="" method="post">
+        {% csrf_token %}
+
+        {% for question in questions %}
+            <div class="card" style="margin: 20px 0;">
+                <div class="card-body">
+                    <h4 class="card-title">{{forloop.counter}}) {{ question.question_text }}</h4>
+                    {% for choice in question.testchoice_set.all %}
+                        <input type="radio" name="{{forloop.parentloop.counter}}" id="choice{{ choice.id }}" value="{{ choice.id }}" required />
+                        <label for="choice{{ choice.id }}">{{ choice.choice_text }}</label><br />
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+        
+            <div class="d-flex justify-content-end" style="margin: 40px 0;">
+                <input type="submit" class="btn btn-danger btn-lg" value="Submit" />
+            </div>
+        
+    </form>
+
+    {{score}}
+        
+</div>
+{% endblock content %}
+    

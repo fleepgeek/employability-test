@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'accounts',
-    'personality_app',
+    'personality',
 ]
 
 MIDDLEWARE = [

@@ -44,11 +44,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='testchoice',
             name='question',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='personality_app.TestQuestion'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='personality.TestQuestion'),
         ),
         migrations.AddField(
             model_name='personalityquestion',
             name='category',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='personality_app.PersonalityType'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='personality.PersonalityType'),
         ),
     ]
