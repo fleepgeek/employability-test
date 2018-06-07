@@ -1,0 +1,402 @@
+[
+{
+    "model": "personality.personalityquestion",
+    "pk": 1,
+    "fields": {
+        "question_text": "I have a rich vocabulary.",
+        "category": 1
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 2,
+    "fields": {
+        "question_text": "I have difficulty understanding abstract ideas.",
+        "category": 1
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 3,
+    "fields": {
+        "question_text": "I have a vivid imagination.",
+        "category": 1
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 4,
+    "fields": {
+        "question_text": "I am not interested in abstract ideas.",
+        "category": 1
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 5,
+    "fields": {
+        "question_text": "I have excellent ideas.",
+        "category": 1
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 6,
+    "fields": {
+        "question_text": "I do not have a good imagination.",
+        "category": 1
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 7,
+    "fields": {
+        "question_text": "I am quick to understand things.",
+        "category": 1
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 8,
+    "fields": {
+        "question_text": "I use difficult words.",
+        "category": 1
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 9,
+    "fields": {
+        "question_text": "I spend time reflecting on things.",
+        "category": 1
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 10,
+    "fields": {
+        "question_text": "I am full of ideas.",
+        "category": 1
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 11,
+    "fields": {
+        "question_text": "I am always prepared.",
+        "category": 2
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 12,
+    "fields": {
+        "question_text": "I leave my belongings around.",
+        "category": 2
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 13,
+    "fields": {
+        "question_text": "I pay attention to details.",
+        "category": 2
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 14,
+    "fields": {
+        "question_text": "I make a mess of things.",
+        "category": 2
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 15,
+    "fields": {
+        "question_text": "I get chores done right away.",
+        "category": 2
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 16,
+    "fields": {
+        "question_text": "I often forget to put things back in their proper place.",
+        "category": 2
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 17,
+    "fields": {
+        "question_text": "I like order.",
+        "category": 2
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 18,
+    "fields": {
+        "question_text": "I shirk my duties.",
+        "category": 2
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 19,
+    "fields": {
+        "question_text": "I follow a schedule.",
+        "category": 2
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 20,
+    "fields": {
+        "question_text": "I am exacting in my work.",
+        "category": 2
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 21,
+    "fields": {
+        "question_text": "I am the life of the party.",
+        "category": 3
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 22,
+    "fields": {
+        "question_text": "I don't talk a lot.",
+        "category": 3
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 23,
+    "fields": {
+        "question_text": "I feel comfortable around people.",
+        "category": 3
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 24,
+    "fields": {
+        "question_text": "I keep in the background.",
+        "category": 3
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 25,
+    "fields": {
+        "question_text": "I start conversations.",
+        "category": 3
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 26,
+    "fields": {
+        "question_text": "I have little to say.",
+        "category": 3
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 27,
+    "fields": {
+        "question_text": "I talk to a lot of different people at parties.",
+        "category": 3
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 28,
+    "fields": {
+        "question_text": "I don't like to draw attention to myself.",
+        "category": 3
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 29,
+    "fields": {
+        "question_text": "I don't mind being the center of attention.",
+        "category": 3
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 30,
+    "fields": {
+        "question_text": "I am quiet around strangers.",
+        "category": 3
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 31,
+    "fields": {
+        "question_text": "I feel little concern for others.",
+        "category": 4
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 32,
+    "fields": {
+        "question_text": "I am interested in people.",
+        "category": 4
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 33,
+    "fields": {
+        "question_text": "I insult people.",
+        "category": 4
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 34,
+    "fields": {
+        "question_text": "I sympathize with others' feelings.",
+        "category": 4
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 35,
+    "fields": {
+        "question_text": "I am not interested in other people's problems.",
+        "category": 4
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 36,
+    "fields": {
+        "question_text": "I have a soft heart.",
+        "category": 4
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 37,
+    "fields": {
+        "question_text": "I am not really interested in others.",
+        "category": 4
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 38,
+    "fields": {
+        "question_text": "I take time out for others.",
+        "category": 4
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 39,
+    "fields": {
+        "question_text": "I feel others' emotions.",
+        "category": 4
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 40,
+    "fields": {
+        "question_text": "I make people feel at ease.",
+        "category": 4
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 41,
+    "fields": {
+        "question_text": "I get stressed out easily.",
+        "category": 5
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 42,
+    "fields": {
+        "question_text": "I am relaxed most of the time.",
+        "category": 5
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 43,
+    "fields": {
+        "question_text": "I worry about things.",
+        "category": 5
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 44,
+    "fields": {
+        "question_text": "I seldom feel blue.",
+        "category": 5
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 45,
+    "fields": {
+        "question_text": "I am easily disturbed.",
+        "category": 5
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 46,
+    "fields": {
+        "question_text": "I get upset easily.",
+        "category": 5
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 47,
+    "fields": {
+        "question_text": "I change my mood a lot.",
+        "category": 5
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 48,
+    "fields": {
+        "question_text": "I have frequent mood swings.",
+        "category": 5
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 49,
+    "fields": {
+        "question_text": "I get irritated easily.",
+        "category": 5
+    }
+},
+{
+    "model": "personality.personalityquestion",
+    "pk": 50,
+    "fields": {
+        "question_text": "I often feel blue.",
+        "category": 5
+    }
+}
+]

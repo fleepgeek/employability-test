@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="container">
+        <!-- {% for personality in personality_types %}
+            
+            {% if personality.id == 1 and not done.o %}
+                <h4>{{personality.name}}</h4>
+                {% for question in personality.personalityquestion_set.all %}
+                    <p>{{question.question_text}}</p>
+                {% endfor %}
+            {% else %}
+                
+                {% if personality.id == 2 and not done.c %}
+                    <h4>{{personality.name}}</h4>
+                    {% for question in personality.personalityquestion_set.all %}
+                        <p>{{question.question_text}}</p>
+                    {% endfor %}
+                {% endif %}
+                    
+            {% endif %}
+                
+        {% empty %}
+            <h2>No Questions Yet. Contact the admin</h2>
+        {% endfor %} -->
+<p>Avg: {{request.session.avg_o}} Done: {{request.session.done_o|default:False}}</p>
+<p>Avg: {{request.session.avg_c}} Done: {{request.session.done_c|default:False}}</p>
+<p>Avg: {{request.session.avg_e}} Done: {{request.session.done_e|default:False}}</p>
+<p>Avg: {{request.session.avg_a}} Done: {{request.session.done_a|default:False}}</p>
+<p>Avg: {{request.session.avg_n}} Done: {{request.session.done_n|default:False}}</p>
+        
+        {% if not request.session.done_o|default:False %}
+            {{type_o.name}}
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="test_type" value="{{ type_o.id }}">
+                {% include "personality/snippets/personality_choices.html" with personality_type=type_o %} 
+                <div class="d-flex justify-content-end" style="margin: 40px 0;">
+                    <input type="submit" class="btn btn-danger btn-lg" value="Next" />
+                </div>
+            </form>
+        {% elif not request.session.done_c|default:False %}
+            {{type_c.name}}
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="test_type" value="{{ type_c.id }}">
+                {% include "personality/snippets/personality_choices.html" with personality_type=type_c %} 
+                <div class="d-flex justify-content-end" style="margin: 40px 0;">
+                    <input type="submit" class="btn btn-danger btn-lg" value="Next" />
+                </div>
+            </form>
+        {% elif not request.session.done_e|default:False %}
+            {{type_e.name}}
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="test_type" value="{{ type_e.id }}">
+                {% include "personality/snippets/personality_choices.html" with personality_type=type_e %} 
+                <div class="d-flex justify-content-end" style="margin: 40px 0;">
+                    <input type="submit" class="btn btn-danger btn-lg" value="Next" />
+                </div>
+            </form>
+        {% elif not request.session.done_a|default:False %}
+            {{type_a.name}}
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="test_type" value="{{ type_a.id }}">
+                {% include "personality/snippets/personality_choices.html" with personality_type=type_a %} 
+                <div class="d-flex justify-content-end" style="margin: 40px 0;">
+                    <input type="submit" class="btn btn-danger btn-lg" value="Next" />
+                </div>
+            </form>
+        {% elif not request.session.done_n|default:False %}
+            {{type_n.name}}
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="test_type" value="{{ type_n.id }}">
+                {% include "personality/snippets/personality_choices.html" with personality_type=type_n %} 
+                <div class="d-flex justify-content-end" style="margin: 40px 0;">
+                    <input type="submit" class="btn btn-danger btn-lg" value="Next" />
+                </div>
+            </form>
+        {% else %}
+            <h2>You are done</h2>
+            <a href="" class="btn btn-primary">Submit For Processing</a>
+        {% endif %}
+            
+    </div>
+{% endblock content %}
+
+    
