@@ -1,13 +1,13 @@
 import os
 import pickle
+import numpy as np
+import pandas as pd
 
 from django.shortcuts import render, redirect
 from django.views import View
 from django.views.generic import ListView
 from django.conf import settings
-
-import numpy as np
-import pandas as pd
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import TestQuestion, TestChoice, PersonalityType, PersonalityQuestion
 from personality.utils import clear_test_session
@@ -15,7 +15,7 @@ from personality.utils import clear_test_session
 
 classifer_base = os.path.join(settings.BASE_DIR, 'personality', 'classifiers')
 
-class AptitudeTest(View):
+class AptitudeTest(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         qs = TestQuestion.objects.all()[:10]
         context = {
@@ -36,7 +36,7 @@ class AptitudeTest(View):
         return redirect('aptitude_finished')
         
 
-class PersonalityTest(View):
+class PersonalityTest(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         qs = PersonalityType.objects.all()
         type_o = PersonalityType.objects.get(id=1)
@@ -115,7 +115,7 @@ class PersonalityTest(View):
         return redirect('personality_test')
 
 
-class PersonalityCompleted(View):
+class PersonalityCompleted(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         pickle_in = open(os.path.join(classifer_base, 'employability.pkl'), 'rb')
         clf_emp = pickle.load(pickle_in)

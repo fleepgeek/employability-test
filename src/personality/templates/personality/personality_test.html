@@ -29,7 +29,7 @@
 <p>Avg: {{request.session.avg_e}} Done: {{request.session.done_e|default:False}}</p>
 <p>Avg: {{request.session.avg_a}} Done: {{request.session.done_a|default:False}}</p>
 <p>Avg: {{request.session.avg_n}} Done: {{request.session.done_n|default:False}}</p>
-        
+
         {% if not request.session.done_o|default:False %}
             {{type_o.name}}
             <form action="" method="post">

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container">
+    <div class="col-12 mx-auto py-5 text-center">
+        <h2>Hello {{ request.user.username }}</h2>
+        <p>You are to complete an aptitude and personality test.</p>
+        {% if not request.user.applicant.taken_apt_test %}
+            <a href="{% url 'aptitude_test' %}" class="btn btn-primary btn-lg">Aptitude Test</a>   
+        {% elif not request.user.applicant.taken_personality_test %}
+            <a href="{% url 'personality_test' %}" class="btn btn-primary btn-lg">Take Your Personality Test</a>
+        {% else %}
+            <div class="alert alert-info messages">
+                <span class="alert-info">
+                    You have already completed all tests. We would get back to you via email, Thanks.
+                </span>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}
+    
