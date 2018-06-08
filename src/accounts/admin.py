@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth import get_user_model
+from django.contrib.auth.models import Group
 
 from django.conf import settings
 
@@ -17,11 +18,18 @@ class ApplicantInline(admin.StackedInline):
 
 class CustomUserAdmin(UserAdmin):
     inlines = (ApplicantInline, )
-    list_display = ('username', 'email', 'is_staff')
+    list_display = ('username', 'email', 'is_staff', 'get_employable')
     list_select_related = ('applicant', )
-    # def get_validated(self, instance):
-    #     return instance.author.email_validated
-    # get_validated.short_description = 'Email Validated'
+    fieldsets = (
+        (None, {'fields': ('email', 'password')}),
+        ('Personal info', {'fields': ('username', 'first_name', 'last_name',)}),
+        ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser',)}),
+    )
+    def get_employable(self, instance):
+        return instance.applicant.is_employable
+    get_employable.short_description = 'Is Employable'
 
 admin.site.unregister(User)
 admin.site.register(User, CustomUserAdmin)
+
+admin.site.unregister(Group)

@@ -10,13 +10,12 @@ from .models import Applicant
 User = get_user_model()
 
 class ApplicantRegisterForm(forms.ModelForm):
-    # email = forms.EmailField(label='Email', widget=forms.EmailInput)
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Confirm Password', widget=forms.PasswordInput)
 
     class Meta:
         model = User
-        fields = ('username', 'email')
+        fields = ('username', 'email', 'first_name', 'last_name')
 
     def clean_email(self):
         email = self.cleaned_data.get('email')
