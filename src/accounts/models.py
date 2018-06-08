@@ -17,10 +17,3 @@ class Applicant(models.Model):
 
     def __str__(self):
         return self.user.username
-
-# def user_post_save_receiver(sender, created, instance, *args, **kwargs):
-#     if created and not instance.is_staff:
-#         Applicant.objects.create(user=instance)
-#         instance.applicant.save()
-
-# post_save.connect(user_post_save_receiver, sender=User)
