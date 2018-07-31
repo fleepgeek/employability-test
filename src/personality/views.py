@@ -11,7 +11,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import get_user_model
 
 from .models import TestQuestion, TestChoice, PersonalityType, PersonalityQuestion
-from personality.utils import clear_test_session
+from .utils import clear_test_session
 
 User = get_user_model()
 classifer_base = os.path.join(settings.BASE_DIR, 'personality', 'classifiers')
