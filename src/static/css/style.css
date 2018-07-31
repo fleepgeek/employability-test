@@ -1,0 +1,6 @@
+.jmb-bg {
+    background: url('../images/header_bg.jpg') no-repeat no-repeat center;
+    background-size: cover;
+    text-shadow: 2px 2px 10px #000;
+    color: #fff;
+}

@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="jumbotron">
-    <h1 class="display-6">JOB RECRUITMENT MANAGEMENT SYSTEM</h1>
-    <p class="lead">This platform is used to access prospective applicants and verify whom is more suitable for employment.</p>
-    <hr class="my-4">
-    <p>Take your tests. The tests is for only job applicants. Please note that your results would not be shown to you.</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="{% url 'personality_home' %}" role="button">Start Test</a>
-    </p>
-  </div>
+<div class="jmb-bg">
+  <div class="jumbotron" style="background-color: rgba(0, 0, 0, 0.5);">
+      <h1 class="display-6">PREDICTION SYSTEM FOR EMPLOYABILITY</h1>
+      <p class="lead">This platform is used to access prospective applicants and verify whom is more suitable for employment.</p>
+      <hr class="my-4">
+      <p>Take your tests. The tests is for only job applicants. Please note that your results would not be shown to you.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="{% url 'personality_home' %}" role="button">Start Test</a>
+      </p>
+    </div>
+</div>
 {% endblock content %}
     

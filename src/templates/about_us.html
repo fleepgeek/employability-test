@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
 <div class="container">
     <div class="row">
@@ -7,9 +9,12 @@
             <h2>About the system</h2>
             <p>{% lorem %}</p>
             <p>{% lorem %}</p>
+            <div class="text-center">
+                <img style="width: 300px;" src="{% static 'images/personality_diagram.png' %}" alt="personality">
+            </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row mb-5">
         <div class="col-12">
             <h2>About Us</h2>
             <p>{% lorem %}</p>
